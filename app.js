@@ -48,7 +48,7 @@ app.get("/images/image/:id", (req, res)=>{  // get a specific image
 });
 
 app.get("/images/s/image/:q", (req, res)=>{    // search image by label
-    Image.find({label: req.params.q}).sort({_id: -1}).exec((err, imagesFound)=>{
+    Image.find({label: req.params.q}, (err, imagesFound)=>{
         if (!err) {
             res.send(imagesFound);
         }
