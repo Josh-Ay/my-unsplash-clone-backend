@@ -8,7 +8,7 @@ require('dotenv').config();
 
 // connecting to the database
 // mongoose.connect("mongodb://localhost:27017/unsplash-DB")   // LOCAL 
-mongoose.connect(`mongodb+srv://admin-ayo:${process.env.PASSWORD}@cluster0.xbul4.mongodb.net/unsplash-DB`)  //AWS
+mongoose.connect(process.env.MONGO_DB_URI)  //AWS
 
 
 // configuring the express server
